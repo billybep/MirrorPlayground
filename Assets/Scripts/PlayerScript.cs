@@ -75,13 +75,6 @@ public class PlayerScript : NetworkBehaviour
         }
             floatingInfo.transform.LookAt(Camera.main.transform);
             floatingInfo.transform.Rotate(0, 180f, 0); // Memutar teks sejajar dengan kamera
-
-        // Mengunci rotasi teks nama pemain agar selalu menghadap ke arah kamera
-        // if (playerNameText != null && Camera.main != null)
-        // {
-        //     playerNameText.transform.LookAt(Camera.main.transform);
-        //     playerNameText.transform.Rotate(0, 180f, 0); // Memutar teks sejajar dengan kamera
-        // }
     }
 
     void LockPlayerNameTextRotationY()
