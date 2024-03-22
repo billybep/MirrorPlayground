@@ -28,7 +28,7 @@ public class PlayerScript : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        floatingInfo.transform.localPosition = new Vector3(0, 2.3f, 0.1f);
+        floatingInfo.transform.localPosition = new Vector3(0.07f, 2f, 0f);
         floatingInfo.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
         string name = " ";
@@ -73,6 +73,15 @@ public class PlayerScript : NetworkBehaviour
             // LockPlayerNameTextRotationY();
             return;
         }
+            floatingInfo.transform.LookAt(Camera.main.transform);
+            floatingInfo.transform.Rotate(0, 180f, 0); // Memutar teks sejajar dengan kamera
+
+        // Mengunci rotasi teks nama pemain agar selalu menghadap ke arah kamera
+        // if (playerNameText != null && Camera.main != null)
+        // {
+        //     playerNameText.transform.LookAt(Camera.main.transform);
+        //     playerNameText.transform.Rotate(0, 180f, 0); // Memutar teks sejajar dengan kamera
+        // }
     }
 
     void LockPlayerNameTextRotationY()
