@@ -20,6 +20,10 @@ public class PlayerScore : NetworkBehaviour
             // Sembunyikan UI jika bukan pemain lokal
             scoreUI.SetActive(false);
         }
+        else
+        {
+            UpdateScoreUI(); // Memperbarui UI skor saat memulai objek pemain lokal
+        }
     }
 
     public void IncreaseScore(int amount)

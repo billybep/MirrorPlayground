@@ -9,13 +9,58 @@ public class ScoreBoard : MonoBehaviour
     public GameObject scoreboardPanel; // Panel yang berisi scoreboard
     public TMP_Text scoreboardText; // Teks untuk menampilkan skor
 
+    private bool isTabPressed = false;
+
+    void Start()
+    {
+        // Pastikan panel scoreboard dimatikan saat permainan dimulai
+        scoreboardPanel.SetActive(false);
+    }
+
+
+
     void Update()
     {
-        // Tampilkan atau sembunyikan scoreboard saat tombol tab ditekan
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            ToggleScoreboard();
+            isTabPressed = true;
         }
+
+        // Jika tombol "Tab" dilepaskan, atur isTabPressed menjadi false dan sembunyikan scoreboard
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            isTabPressed = false;
+            HideScoreboard();
+        }
+
+        if (isTabPressed)
+        {
+            ShowScoreboard();
+        }
+        else
+        {
+            HideScoreboard();
+        }
+
+        // Tampilkan atau sembunyikan scoreboard saat tombol tab ditekan
+        // if (Input.GetKeyDown(KeyCode.Tab))
+        // {
+        //     ToggleScoreboard();
+        // }
+    }
+
+    // Fungsi untuk menampilkan scoreboard
+    void ShowScoreboard()
+    {
+        UpdateScoreboard();
+        scoreboardPanel.SetActive(true);
+    }
+
+    // Fungsi untuk menyembunyikan scoreboard
+    void HideScoreboard()
+    {
+        UpdateScoreboard();
+        scoreboardPanel.SetActive(false);
     }
 
     void ToggleScoreboard()
@@ -27,7 +72,7 @@ public class ScoreBoard : MonoBehaviour
         }
     }
 
-    void UpdateScoreboard()
+    public void UpdateScoreboard()
     {
         PlayerScore[] playerScores = FindObjectsOfType<PlayerScore>();
 
@@ -38,7 +83,9 @@ public class ScoreBoard : MonoBehaviour
         foreach (PlayerScore playerScore in playerScores)
         {
             string playerName = playerScore.GetComponent<PlayerScript>().GetName();
-            scoreboardInfo += $"{playerName}: {playerScore.score}\n";
+
+            if (playerScore.isLocalPlayer) scoreboardInfo += $"<b><color=blue>{playerName}</color></b>: {playerScore.score}\n";
+            else scoreboardInfo += $"{playerName}: {playerScore.score}\n";
         }
 
         scoreboardText.text = scoreboardInfo;
