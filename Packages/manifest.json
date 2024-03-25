@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.inworld.unity.core": "file:/Users/billybep/UnityProjects/FX-M/MirrorPlayground/Assets/Inworld/com.inworld.unity.core-3.3.0.tgz",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "2.0.1",
     "com.unity.ide.rider": "3.0.18",
