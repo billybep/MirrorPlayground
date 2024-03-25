@@ -30,7 +30,7 @@ public class PlayerScript : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        floatingInfo.transform.localPosition = new Vector3(0, 2.1f, 0.1f);
+        floatingInfo.transform.localPosition = new Vector3(0, 1.6f, 0.1f);
         floatingInfo.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
         string name = " ";
@@ -145,7 +145,7 @@ public class PlayerScript : NetworkBehaviour
     {
         if (!isLocalPlayer)
         {
-            floatingInfo.transform.localPosition = new Vector3(0, 2f, 0.1f);
+            floatingInfo.transform.localPosition = new Vector3(0, 1.7f, 0.1f);
             floatingInfo.transform.localScale = new Vector3(0.06f, 0.06f, 0.06f);
             floatingInfo.transform.LookAt(Camera.main.transform);
             floatingInfo.transform.Rotate(0, 180, 0);

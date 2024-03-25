@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 5943693717025705267}
   - component: {fileID: 8396682960549854656}
   - component: {fileID: 8072161236780398726}
-  - component: {fileID: 2569292050346087432}
+  - component: {fileID: 2141620579029606639}
   - component: {fileID: 1244265463393792894}
   m_Layer: 0
   m_Name: the_queen_of_hearts_fix_default-mzdekf387rdcsxi0p2v_za
@@ -360,7 +360,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2854045253664872647}
-  - {fileID: 2354078900878732601}
+  - {fileID: 4589437303989045623}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5678264859512407169
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EmotionMap: {fileID: 11400000, guid: 9991e8a9d037f9842aef3b51e6c79262, type: 2}
   m_BodyAnimator: {fileID: 5678264859512407169}
---- !u!114 &2569292050346087432
+--- !u!114 &2141620579029606639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
---- !u!1001 &190954156970940381
+--- !u!1001 &2143094859518243731
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1164,9 +1164,9 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: -4161369568681901532, guid: bfe7e6b47eac540c8b691447369beee6,
     type: 3}
---- !u!4 &2354078900878732601 stripped
+--- !u!4 &4589437303989045623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6769691430286951708, guid: bfe7e6b47eac540c8b691447369beee6,
     type: 3}
-  m_PrefabInstance: {fileID: 190954156970940381}
+  m_PrefabInstance: {fileID: 2143094859518243731}
   m_PrefabAsset: {fileID: 0}
