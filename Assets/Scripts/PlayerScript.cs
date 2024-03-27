@@ -30,7 +30,7 @@ public class PlayerScript : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        floatingInfo.transform.localPosition = new Vector3(0, 1.6f, 0.1f);
+        floatingInfo.transform.localPosition = new Vector3(0, 1.65f, 0.1f);
         floatingInfo.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
         string name = " ";
