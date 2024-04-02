@@ -4385,6 +4385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VroidPG1
       objectReference: {fileID: 0}
+    - target: {fileID: 2953041927574748209, guid: 69b47a789436d4d2da2a4ee2d00e6457,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3938704657254786012, guid: 69b47a789436d4d2da2a4ee2d00e6457,
         type: 3}
       propertyPath: m_DirtyAABB
@@ -4632,6 +4637,11 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 22fe5437466f14d60b4cc2243f74bd89,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 22fe5437466f14d60b4cc2243f74bd89,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
